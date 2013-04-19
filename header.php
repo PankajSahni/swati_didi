@@ -42,7 +42,7 @@
 							<li class="current_page_item"><a href="index.php">Homepage</a></li>
 							<li><a href="about_us.php">About Us</a></li>
 							<li><a href="services.php">Services</a></li>
-							<li><a href="twocolumn2.html">Two Column #2</a></li>
+							<li><a href="careerpedia.php">Careerpedia</a></li>
 							<li><a href="contact_us.php">Contact Us</a></li>
 						</ul>
 					</nav>
