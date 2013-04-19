@@ -24,6 +24,18 @@
 <script src="css/5grid/init.js?use=mobile,desktop,1000px&amp;mobileUI=1&amp;mobileUI.theme=none"></script>
 <!--[if IE 9]><link rel="stylesheet" href="css/style-ie9.css" /><![endif]-->
 </head><body class="homepage">
+    <?php $index = ""; $about_us = ""; $services = ""; $careerpedia = ""; $contact_us = "";?>
+    <?php if(strpos($_SERVER['REQUEST_URI'],'about_us') == TRUE):?>
+    <?php $about_us = 'class="current_page_item"';?>
+    <?php elseif(strpos($_SERVER['REQUEST_URI'],'careerpedia') == TRUE):?>
+    <?php $careerpedia = 'class="current_page_item"';?>
+    <?php elseif(strpos($_SERVER['REQUEST_URI'],'services') == TRUE):?>
+    <?php $services = 'class="current_page_item"';?>
+    <?php elseif(strpos($_SERVER['REQUEST_URI'],'contact_us') == TRUE):?>
+    <?php $contact_us = 'class="current_page_item"';?>
+    <?php else:?>
+    <?php $index = 'class="current_page_item"';?>
+    <?php endif;?>
 <div id="header-wrapper">
 	<header id="header">
 		<div class="5grid-layout">
@@ -39,11 +51,12 @@
 				<div class="12u" id="menu">
 					<nav class="mobileUI-site-nav">
 						<ul>
-							<li class="current_page_item"><a href="index.php">Homepage</a></li>
-							<li><a href="about_us.php">About Us</a></li>
-							<li><a href="services.php">Services</a></li>
-							<li><a href="careerpedia.php">Careerpedia</a></li>
-							<li><a href="contact_us.php">Contact Us</a></li>
+                                                    
+							<li <?php echo $index;?>><a href="index.php">Homepage</a></li>
+							<li <?php echo $about_us;?>><a href="about_us.php">About Us</a></li>
+							<li <?php echo $services;?>><a href="services.php">Services</a></li>
+							<li <?php echo $careerpedia;?>><a href="careerpedia.php">Careerpedia</a></li>
+							<li <?php echo $contact_us;?>><a href="contact_us.php">Contact Us</a></li>
 						</ul>
 					</nav>
 				</div>
